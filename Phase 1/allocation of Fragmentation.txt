@@ -1,0 +1,47 @@
+
+
+site1:
+
+create table student1(rollNo varchar(30), studName varchar(50) NOT NULL, prog varchar(20) NOT NULL, deptId varchar(10) NOT NULL, yoa date NOT NULL, yop date, emailId varchar(100),dob date,hometown varchar(50) NOT NULL, status varchar(10), PRIMARY KEY(rollNo));
+
+create table faculty1(facultyId varchar(20), facultyName varchar(50) NOT NULL,deptId varchar(10), facultyTitle varchar(50), PRIMARY KEY(facultyId));
+
+create table course1(courseId varchar(20), courseName varchar(50) NOT NULL, credit integer NOT NULL, cType varchar(30), prerequisite varchar(20), PRIMARY KEY(courseId));
+
+create table courseOffering1(oId integer , courseId varchar(20) NOT NULL, semester varchar(30) NOT NULL, oYear integer NOT NULL, PRIMARY KEY(oId)); 
+
+create table enrollment1(rollNo varchar(30), oId varchar(20), grade varchar(4), attendance integer, PRIMARY KEY(rollNo,oId));
+
+create table department(deptId varchar(10), deptName varchar(30) NOT NULL, hodId varchar(20),PRIMARY KEY(deptId));
+
+
+site 2:
+
+create table student2(rollNo varchar(30), studName varchar(50) NOT NULL, prog varchar(20) NOT NULL, deptId varchar(10) NOT NULL, yoa date NOT NULL, yop date, emailId varchar(100),dob date,hometown varchar(50) NOT NULL, status varchar(10), PRIMARY KEY(rollNo));
+
+create table faculty2(facultyId varchar(20), salary float, hometown varchar(50), emailId varchar(100), PRIMARY KEY(facultyId));
+
+create table course2(courseId varchar(20), courseName varchar(50) NOT NULL, credit integer NOT NULL, cType varchar(30), prerequisite varchar(20), PRIMARY KEY(courseId));
+
+create table enrollment2(rollNo varchar(30), oId varchar(20), grade varchar(4), attendance integer, PRIMARY KEY(rollNo,oId));
+
+create table department(deptId varchar(10), deptName varchar(30) NOT NULL, hodId varchar(20),PRIMARY KEY(deptId));
+
+
+site 3:
+
+create table student3(rollNo varchar(30), studName varchar(50) NOT NULL, prog varchar(20) NOT NULL, deptId varchar(10) NOT NULL, yoa date NOT NULL, yop date, emailId varchar(100),dob date,hometown varchar(50) NOT NULL, status varchar(10), PRIMARY KEY(rollNo));
+
+create table course3(courseId varchar(20), courseName varchar(50) NOT NULL, credit integer NOT NULL, cType varchar(30), prerequisite varchar(20), PRIMARY KEY(courseId));
+
+create table courseOffering2(oId integer ,facultyId varchar(20) NOT NULL, roomNo varchar(20), meetAt time, PRIMARY KEY(oId)); 
+
+create table enrollment3(rollNo varchar(30), oId varchar(20), grade varchar(4), attendance integer, PRIMARY KEY(rollNo,oId));
+
+create table department(deptId varchar(10), deptName varchar(30) NOT NULL, hodId varchar(20),PRIMARY KEY(deptId));
+
+
+
+
+
+

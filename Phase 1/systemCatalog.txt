@@ -1,0 +1,24 @@
+
+create database syscat;
+use syscat;
+
+create table site(siteId integer NOT NULL PRIMARY KEY AUTO_INCREMENT, siteName varchar(20) NOT NULL , ipAddress varchar(20) NOT NULL, schemaName varchar(20) NOT NULL, userName varchar(20) NOT NULL, password varchar(20));
+
+create table relation(relId integer NOT NULL PRIMARY KEY AUTO_INCREMENT,relName varchar(20));
+
+create table relDetail(relId integer NOT NULL, attribute varchar(30), attrType varchar(20), isPKey bool NOT NULL, isNullable bool NOT NULL,PRIMARY KEY(relId,attribute));
+
+create table fragment(fragName varchar(30), relId integer, siteId integer, fragType varchar(10), PRIMARY KEY(fragName,relId,siteId));
+
+create table hFrag(fragName varchar(30), predLogic varchar(100), PRIMARY KEY(fragName));
+
+create table vFrag(fragName varchar(30) ,fragAttr varchar(30) , PRIMARY KEY(fragName,fragAttr));
+
+create table dFrag(fragName varchar(30), predLogic varchar(200), PRIMARY KEY(fragName));
+
+
+
+create table relDetail(relId integer NOT NULL, attribute varchar(30), attrType varchar(20), isPKey bool NOT NULL, isNullable bool NOT NULL,PRIMARY KEY(relId,attribute), FOREIGN KEY (relId) REFERENCES relation(relId));
+
+create table fragment(fragName varchar(30), relId integer, siteId integer, fragType varchar(10), PRIMARY KEY(fragName,relId,siteId),FOREIGN KEY (relId) REFERENCES relation(relId), FOREIGN KEY (siteId) REFERENCES site(siteId));
+

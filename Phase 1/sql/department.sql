@@ -1,0 +1,10 @@
+INSERT INTO department(deptId,deptName,hodId) VALUES("ECE","Electronics and Communication Engineering","FAC171");
+INSERT INTO department(deptId,deptName,hodId) VALUES("CNS","Computational Natural Sciences","FAC125");
+INSERT INTO department(deptId,deptName,hodId) VALUES("EHD","Exact Humanities","FAC167");
+INSERT INTO department(deptId,deptName,hodId) VALUES("CSIS","Computer Science and Information Security","FAC133");
+INSERT INTO department(deptId,deptName,hodId) VALUES("CL","Computational Linguistics","FAC163");
+INSERT INTO department(deptId,deptName,hodId) VALUES("CASE","Computer Aided Structural Engineering","FAC155");
+INSERT INTO department(deptId,deptName,hodId) VALUES("BIO","Bioinformatics","FAC100");
+INSERT INTO department(deptId,deptName,hodId) VALUES("PWR","Power Systems","FAC117");
+INSERT INTO department(deptId,deptName,hodId) VALUES("VLSI","VLSI and Embedded Systems","FAC171");
+INSERT INTO department(deptId,deptName,hodId) VALUES("CSE","Computer Science and Engineering","FAC132");

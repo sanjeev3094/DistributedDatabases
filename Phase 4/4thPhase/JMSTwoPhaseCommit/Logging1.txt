@@ -1,0 +1,22 @@
+Apr 15, 2012 7:53:37 PM servers.Listener1 main
+INFO: Node 1 started at [localhost:3001]
+Apr 15, 2012 7:53:47 PM servers.Listener1 main
+INFO: Interaction with initiator over...
+Apr 15, 2012 7:53:47 PM servers.Listener1 printParticipantList
+INFO: Details of participant list on machine : [localhost:3001]
+Apr 15, 2012 7:53:47 PM servers.Listener1 printParticipantList
+INFO: localhost 3002 2
+Apr 15, 2012 7:53:47 PM servers.Listener1 printParticipantList
+INFO: localhost 3003 3
+Apr 15, 2012 7:53:47 PM servers.Listener1 main
+INFO: Node 1 acting as a participant...
+Apr 15, 2012 7:53:49 PM participants.Participant init
+INFO: <<PREPARE>> recieved from [localhost:3003]
+Apr 15, 2012 7:53:57 PM participants.Participant promptReady
+WARNING: Sending''' <<VOTE-ABORT>>
+Apr 15, 2012 7:53:57 PM participants.Participant promptReady
+WARNING: In <<ABORT>> state..
+Apr 15, 2012 7:53:57 PM participants.Participant init
+WARNING: In abort state
+Apr 15, 2012 7:53:57 PM participants.Participant init
+INFO: Interaction over with co-ordinator...

@@ -1,0 +1,16 @@
+create database college;
+use college;
+
+create table student(rollNo varchar(30), studName varchar(50) NOT NULL, prog varchar(20) NOT NULL, deptId varchar(10) NOT NULL, yoa date NOT NULL, yop date, emailId varchar(100),dob date,hometown varchar(50) NOT NULL, status varchar(10), PRIMARY KEY(rollNo));
+
+create table faculty(facultyId varchar(20), facultyName varchar(50) NOT NULL,deptId varchar(10), facultyTitle varchar(50), salary float, hometown varchar(50), emailId varchar(100), PRIMARY KEY(facultyId));
+
+create table course(courseId varchar(20), courseName varchar(50) NOT NULL, credit integer NOT NULL, cType varchar(30), prerequisite varchar(20), PRIMARY KEY(courseId));
+
+create table courseOffering(oId integer , courseId varchar(20) NOT NULL, semester varchar(30) NOT NULL, oYear integer NOT NULL, facultyId varchar(20) NOT NULL, roomNo varchar(20), meetAt time, PRIMARY KEY(oId),FOREIGN KEY (courseId) REFERENCES course(courseId),FOREIGN KEY (facultyId) REFERENCES relation(facultyId)); 
+
+create table enrollment(rollNo varchar(30), oId varchar(20), grade varchar(4), attendance integer, PRIMARY KEY(rollNo,oId),FOREIGN KEY (rollNo) REFERENCES relation(rollNo),FOREIGN KEY (oId) REFERENCES relation(oId));
+
+create table department(deptId varchar(10), deptName varchar(30), hodId varchar(20),PRIMARY KEY(deptId),FOREIGN KEY (hodId) REFERENCES faculty(facultyId));
+
+

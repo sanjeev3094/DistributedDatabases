@@ -1,0 +1,50 @@
+SELECT course.courseName,student.studName FROM student,enrollment,courseOffering,course WHERE student.rollNo = enrollment.rollNo and enrollment.oId = courseOffering.oId and courseOffering.courseId = course.courseId and course.cType='elective' and student.prog = 'BTech'
+
+select student.*,faculty.salary from student,faculty,department where student.deptId=faculty.deptId and faculty.deptId=department.deptId;
+
+select studName,department.* from student,department where student.deptId=department.deptId and prog='BTech';
+
+select * from student,enrollment where student.rollNo = enrollment.rollNo and prog='BTech'
+
+select sum(faculty.deptId),avg(salary),faculty.*,courseOffering.* from student,faculty,courseOffering where faculty.deptId=student.deptId and faculty.facultyId = courseOffering.facultyId and prog = 'Btech' and student.deptId = 'CS' and yoa = '2010' group by prog desc,prog desc having student.deptId='CS';
+
+select student.rollNo,count(enrollment.rollNo) from student,enrollment where student.rollNo=enrollment.rollNo group by student.rollNo;
+
+select rollNo,hometown from student order by hometown;
+
+select student.rollNo,count(enrollment.rollNo) from student,enrollment where student.rollNo=enrollment.rollNo group by student.rollNo order by student.rollNo desc;
+
+select min(salary),deptId from faculty group by deptId having deptId='CSE';
+
+select * from student;
+select * from faculty;
+select * from courseOffering;
+select * from course;
+select * from enrollment;
+select * from department;
+
+select * from student,department where student.deptId = department.deptId and prog='PhD';
+
+select courseName,studName from student,enrollment,courseOffering,course where student.rollNo = enrollment.rollNo and enrollment.oId = courseOffering.oId and courseOffering.courseId = course.courseId and cType='elective' and prog = 'BTech';
+
+select * from student,enrollment,courseOffering,faculty,department where student.rollNo=enrollment.rollNo and enrollment.oId=courseOffering.oId and faculty.facultyId=courseOffering.facultyId and faculty.deptId=department.deptId and prog='BTech';
+
+select courseName,semester from course,courseOffering where course.courseId=courseOffering.courseId and cType='elective'; 
+
+select count(*) from student,enrollment where student.rollNo=enrollment.rollNo;
+
+select hometown,studName,count(studName) from student,enrollment where student.rollNo=enrollment.rollNo group by studName order by hometown desc;
+
+select hometown,count(student.rollNo) from student,enrollment where student.rollNo=enrollment.rollNo group by hometown;
+
+select department.deptId, max(salary) from faculty,department where faculty.deptId=department.deptId group by department.deptId;
+
+
+
+
+
+
+
+
+
+

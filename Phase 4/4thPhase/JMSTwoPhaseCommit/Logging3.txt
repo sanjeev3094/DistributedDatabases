@@ -1,0 +1,32 @@
+Apr 15, 2012 9:54:11 PM servers.Listener3 main
+INFO: Node 3 started at [10.2.24.51:3003]
+Apr 15, 2012 9:54:28 PM servers.Listener3 printParticipantList
+INFO: Details of participant list on machine : [10.2.24.51:3003]
+Apr 15, 2012 9:54:28 PM servers.Listener3 printParticipantList
+INFO: 10.3.3.40 3001 1
+Apr 15, 2012 9:54:28 PM servers.Listener3 printParticipantList
+INFO: 10.2.24.50 3002 2
+Apr 15, 2012 9:54:28 PM servers.Listener3 main
+INFO: Interaction with initiator over...
+Apr 15, 2012 9:54:28 PM servers.Listener3 main
+INFO: Node 3 acting as a coordinator...
+Apr 15, 2012 9:54:28 PM participants.Coordinator broadcastPrepareMsg
+INFO: Sending <<PREPARE>> to all
+Apr 15, 2012 9:54:28 PM participants.Coordinator broadcastPrepareMsg
+INFO: Sending <<PREPARE>> to [10.3.3.40:3001]
+Apr 15, 2012 9:54:29 PM participants.Coordinator broadcastPrepareMsg
+INFO: Sending <<PREPARE>> to [10.2.24.50:3002]
+Apr 15, 2012 9:54:29 PM participants.Coordinator init
+INFO: In wait state and waiting for votes from participant...
+Apr 15, 2012 9:54:49 PM participants.threads.AskVotesFromParticipant run
+WARNING: Disconnected from the participant []
+Apr 15, 2012 9:54:49 PM participants.Coordinator sendGlobalMsg
+INFO: Broadcasting <<GLOBAL-ABORT>>
+Apr 15, 2012 9:54:49 PM participants.Coordinator sendGlobalMsg
+INFO: <<GLOBAL-ABORT>> sent to [10.3.3.40:3001]
+Apr 15, 2012 9:54:49 PM participants.Coordinator sendGlobalMsg
+INFO: <<GLOBAL-ABORT>> sent to [10.2.24.50:3002]
+Apr 15, 2012 9:54:49 PM participants.Coordinator init
+INFO: In abort state...
+Apr 15, 2012 9:56:36 PM participants.Coordinator recieveAck
+INFO: Recieved ACK from [10.2.24.50:3002]
